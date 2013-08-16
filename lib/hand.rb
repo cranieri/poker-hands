@@ -1,5 +1,6 @@
 class Hand
   include RankSelector
+  include Comparable
 
   attr_reader :hand, :rank
 
@@ -8,16 +9,28 @@ class Hand
     @rank = select_rank
   end
 
-  def select_rank
-    return StraightFlush.new(@hand) if is_straight_flush?
-    return FourOfAKind.new(@hand) if is_four_of_a_kind?
-    return FullHouse.new(@hand) if is_full_house?
-    return Flush.new(@hand) if is_flush?
-    return Straight.new(@hand) if is_straight?
-    return ThreeOfAKind.new(@hand) if is_three_of_a_kind?
-    return TwoPairs.new(@hand) if is_two_pairs?
-    return Pair.new(@hand) if is_pair?
-    HighCard.new(@hand)
+  def only_values
+    @hand.map { |hand| hand[:value]}
   end
+
+  private
+
+  def select_rank
+    return StraightFlush.new(self) if is_straight_flush?
+    return FourOfAKind.new(self) if is_four_of_a_kind?
+    return FullHouse.new(self) if is_full_house?
+    return Flush.new(self) if is_flush?
+    return Straight.new(self) if is_straight?
+    return ThreeOfAKind.new(self) if is_three_of_a_kind?
+    return TwoPairs.new(self) if is_two_pairs?
+    return Pair.new(self) if is_pair?
+    HighCard.new(self)
+  end
+
+  def <=>(hand)
+    self.only_values <=> hand.only_values
+  end
+
+
 
 end

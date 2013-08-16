@@ -6,6 +6,7 @@ class Table
   end
 
   def winner
+    @hands.sort { |a, b| a.rank.class::SCORE <=> b.rank.class::SCORE }
   end
 
   def <<(hand)

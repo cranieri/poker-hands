@@ -5,12 +5,16 @@ class PokerController < ApplicationController
     @cards = deck.cards
     @table = ::Table.new
 
-    #(0..10).each do |n_hand|
-    #  @table << Hand.new(create_random_hand(@cards))
-    #end
+    (0..10).each do |n_hand|
+      @table << Hand.new(create_random_hand(@cards))
+    end
 
-    @table << Hand.new([{:value=>"2", :suit=>"D"}, {:value=>"2", :suit=>"D"}, {:value=>"2", :suit=>"D"}, {:value=>"8", :suit=>"C"}, {:value=>"9", :suit=>"C"}])
-
+    @table << Hand.new([{:value=>"2", :suit=>"D"}, {:value=>"5", :suit=>"H"}, {:value=>"4", :suit=>"D"}, {:value=>"3", :suit=>"D"}, {:value=>"8", :suit=>"D"}])
+     h1 = Hand.new([{:value=>"2", :suit=>"D"}, {:value=>"5", :suit=>"H"}, {:value=>"4", :suit=>"D"}, {:value=>"3", :suit=>"D"}, {:value=>"8", :suit=>"D"}])
+     h2 = Hand.new([{:value=>"9", :suit=>"D"}, {:value=>"5", :suit=>"H"}, {:value=>"4", :suit=>"D"}, {:value=>"3", :suit=>"D"}, {:value=>"8", :suit=>"D"}])
+     @arr = [h1, h2]
+     @arr.sort!
+     @winner = @table.winner.last.rank
   end
 
   private
