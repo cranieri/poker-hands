@@ -28,7 +28,7 @@ class Hand
   end
 
   def <=>(hand)
-    self.only_values <=> hand.only_values
+    self.rank <=> hand.rank
   end
 
 

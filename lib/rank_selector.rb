@@ -7,17 +7,17 @@ module RankSelector
 
   def is_two_pairs?
     only_value = @hand.map { |hand| hand[:value]}
-    first_value = only_value.detect { |hand| only_value.count(hand) > 1}
+    first_value = only_value.detect { |hand| only_value.count(hand) == 2}
     if first_value
       only_value.delete(first_value)
-      return only_value.detect { |hand| only_value.count(hand) > 1}
+      return only_value.detect { |hand| only_value.count(hand) == 2}
     end
     nil
   end
 
   def is_three_of_a_kind?
     only_value = @hand.map { |hand| hand[:value]}
-    only_value.detect { |hand| only_value.count(hand) > 2}
+    only_value.detect { |hand| only_value.count(hand) == 3}
   end
 
   def is_straight?

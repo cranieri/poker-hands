@@ -1,4 +1,3 @@
 class Straight < Rank
-  SCORE = 9
-
+  SCORE = 5
 end
