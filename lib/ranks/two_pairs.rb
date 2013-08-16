@@ -1,0 +1,3 @@
+class TwoPairs < Rank
+
+end

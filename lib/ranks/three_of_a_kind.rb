@@ -1,0 +1,3 @@
+class ThreeOfAKind < Rank
+
+end

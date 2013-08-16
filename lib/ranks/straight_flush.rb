@@ -1,0 +1,3 @@
+class StraightFlush < Rank
+
+end

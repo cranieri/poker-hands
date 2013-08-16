@@ -1,0 +1,3 @@
+class Straight < Rank
+
+end
