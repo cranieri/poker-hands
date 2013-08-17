@@ -18,7 +18,7 @@ A simple gem to manage hands in a poker game.
     h4 = Deck::Hand.new([Deck::Card.new("5", "H"), Deck::Card.new("5", "S"), Deck::Card.new("3", "C"), Deck::Card.new("5", "C"), Deck::Card.new("5", "C")])
 
     poker.hands = [h1, h2, h3, h4]
-    winner = @poker.winner
+    winner = poker.winner
 ```
 Winner will be a Deck::Hand object
 
