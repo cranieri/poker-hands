@@ -1,4 +1,4 @@
-require 'card'
+module Deck
 class Deck
   attr_reader :cards
 
@@ -7,10 +7,11 @@ class Deck
   end
 
   def create_cards
-    Card::VALUES.each do |value|
-      Card::SUITS.each do |suit|
+    ::Deck::Cards::VALUES.each do |value|
+      ::Deck::Cards::SUITS.each do |suit|
         @cards << {value: value, suit: suit}
       end
     end
   end
+end
 end
