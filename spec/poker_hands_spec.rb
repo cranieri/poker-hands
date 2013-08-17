@@ -18,7 +18,7 @@ describe PokerHands do
           poker.hands = hand_two_straight_flush
         end
         it "return an array where the last element is the highest straight flush " do
-          only_val = Deck::Hand.new(poker.winner.hand).only_values
+          only_val = Deck::Hand.new(poker.winner.cards).only_values
           expect(only_val.max).to eq "8"
         end
       end
@@ -40,7 +40,7 @@ describe PokerHands do
           poker.hands = hand_same_four_of_a_kind
         end
         it "return an array where the last element is a four of a kind " do
-          only_val = Deck::Hand.new(poker.winner.hand).only_values
+          only_val = Deck::Hand.new(poker.winner.cards).only_values
           expect(only_val.max).to eq "5"
         end
       end
@@ -61,7 +61,7 @@ describe PokerHands do
           poker.hands = hand_same_full_house
         end
         it "return an array where the last element is highest full house " do
-          only_val = Deck::Hand.new(poker.winner.hand).only_values
+          only_val = Deck::Hand.new(poker.winner.cards).only_values
           expect(only_val.max).to eq "5"
         end
       end
@@ -83,7 +83,7 @@ describe PokerHands do
           poker.hands = hand_two_flush
         end
         it "return an array where the last element is the highest flush " do
-          only_val = Deck::Hand.new(poker.winner.hand).only_values
+          only_val = Deck::Hand.new(poker.winner.cards).only_values
           expect(only_val.max).to eq "8"
         end
       end
@@ -105,7 +105,7 @@ describe PokerHands do
           poker.hands = hand_same_straight
         end
         it "return an array where the last element the highest straight" do
-          only_val = Deck::Hand.new(poker.winner.hand).only_values
+          only_val = Deck::Hand.new(poker.winner.cards).only_values
           expect(only_val.last).to eq "8"
         end
       end
@@ -127,7 +127,7 @@ describe PokerHands do
           poker.hands = hand_some_three_of_a_kind
         end
         it "return an array where the last element is a three of a kind " do
-          only_val = Deck::Hand.new(poker.winner.hand).only_values
+          only_val = Deck::Hand.new(poker.winner.cards).only_values
           expect(only_val.last).to eq "8"
         end
       end
@@ -146,7 +146,7 @@ describe PokerHands do
           poker.hands = hand_same_two_pairs
         end
         it "return an array where the last element is the two pairs with the highest remaining card" do
-          only_val = Deck::Hand.new(poker.winner.hand).only_values
+          only_val = Deck::Hand.new(poker.winner.cards).only_values
           expect(only_val.last).to eq "8"
         end
       end
@@ -167,7 +167,7 @@ describe PokerHands do
           poker.hands = hand_same_pair
         end
         it "return an array where the last element is the pair with the highest remaining card" do
-          only_val = Deck::Hand.new(poker.winner.hand).only_values
+          only_val = Deck::Hand.new(poker.winner.cards).only_values
           expect(only_val.last).to eq "8"
         end
       end
@@ -180,7 +180,7 @@ describe PokerHands do
           poker.hands = hand_high_card_same_highest
         end
         it "return an array where the last element is a high card with the next highest value" do
-          only_val = Deck::Hand.new(poker.winner.hand).only_values
+          only_val = Deck::Hand.new(poker.winner.cards).only_values
           only_val.sort!
           expect(only_val[only_val.length - 2]).to eq "7"
         end
