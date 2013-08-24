@@ -4,15 +4,19 @@ class Hand
   include ::Deck::RankSelector
   include Comparable
 
-  attr_reader :cards, :rank
+  attr_reader :cards
 
   def initialize(hand_cards)
     @cards = hand_cards
-    @rank = select_rank
+    @rank = nil
   end
 
   def only_values
     @cards.map { |card| card.value}
+  end
+
+  def rank
+    @rank || select_rank
   end
 
   private

@@ -13,6 +13,6 @@ Gem::Specification.new do |s|
   s.files      += Dir.glob("lib/**/*")
   s.files      += Dir.glob("spec/**/*")
   s.version     = '0.0.5'
-  s.homepage    = 'https://rubygems.org/gems/poker-hands'
+  s.homepage    = 'https://rubygems.org/gems/poker_hands'
   s.license     = 'MIT'
 end
