@@ -16,7 +16,7 @@ class Hand
   end
 
   def rank
-    @rank || select_rank
+    @rank ||= select_rank
   end
 
   private
