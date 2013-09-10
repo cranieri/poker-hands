@@ -29,7 +29,7 @@ implementations:
 * Ruby 1.9.2
 * Ruby 1.9.3
 * Ruby 2.0.0
-
+*
 If something doesn't work on one of these interpreters, it's a bug.
 
 This library may inadvertently work (or seem to work) on other Ruby
