@@ -1,6 +1,6 @@
 # The Poker Hands Gem
 
-A simple gem to manage hands in a poker game.
+A simple ruby gem to manage hands in a poker game.
 
 ## Installation
     gem install poker_hands
