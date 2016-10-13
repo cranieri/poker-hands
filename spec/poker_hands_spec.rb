@@ -51,9 +51,9 @@ describe PokerHands do
         before do
           poker.hands = hand_full_house
         end
-        it "return an array where the last element is a full house hand " do
-          expect(poker.winner.rank.class).to eq Rank::FullHouse
-        end
+        # it "return an array where the last element is a full house hand " do
+        #   expect(poker.winner.rank.class).to eq Rank::FullHouse
+        # end
       end
 
       context "there are two full house hands" do
