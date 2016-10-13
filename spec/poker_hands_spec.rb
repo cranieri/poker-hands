@@ -30,9 +30,9 @@ describe PokerHands do
         before do
           poker.hands = hand_four_of_a_kind
         end
-        # it "return an array where the last element is a four of a kind " do
-        #   expect(poker.winner.rank.class).to eq Rank::FourOfAKind
-        # end
+        it "return an array where the last element is a four of a kind " do
+          expect(poker.winner.rank.class).to eq Rank::FourOfAKind
+        end
       end
 
       context "there are two four of a kind hands" do
