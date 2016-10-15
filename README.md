@@ -3,6 +3,7 @@
 A simple ruby gem to manage hands in a poker game.
 
 ## Installation
+
     gem install poker_hands
 
 ## Usage Examples
