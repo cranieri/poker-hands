@@ -1,4 +1,4 @@
-# The Poker Hands Gem
+# The Poker Hands Gemsss
 
 A simple ruby gem to manage hands in a poker game.
 
